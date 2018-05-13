@@ -1,0 +1,41 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+
+Diff is a terminal tool on mac -the equivalent of fc(file compare) on windows os. 
+It helps to compare the difference between two versions of a file e.g a ource code file, to spot differences between these two files
+It is a useful tool to use when your new code version contains a bug or an error you cant seem to find.
+Diff compares the file content side by side and then points out the difference between the two files.
+in the mac presentation of the diff results, the minus (-) sign depicts the contents that were removed or changed, while the plus (+) sign depicts what was put.
+format = diff old_version new_version
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+
+Having access to the entire history of your file could help you track your improvements
+2. see what works and what dont
+3. revert back to former changes, should you make a costly mistake on your new code version
+compare a new expert code with the one you previously wrote
+
+Some typical version control documents include
+1. wikipedia
+2. dropbox
+3. Google docs
+
+Dedicated version control systems (VCS)
+
+GIT : Developed by linus torvald (developer of linux). Git is a british slang for unpleasant person
+in  Git terminology, User created checkpoints are called commits
+A good rule of thumb for making commits is to make "one commit per logical change" .ie if you fix a typo and then fix a bug, instead of making - 
+- a commit to save those two changes at once, make two commits, with each one representing the type of change you have made. GIT allows you to give a short explanation for each commit - 
+and it will be much logical to make each commit a change to a particular type of error i.e either a typo change or a bug fix 
+
+CVS : Concurrent Version Systems
+SVN or Subversion
+
+What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions automatically saved, like Google Docs does?
+PROS
+Flexibiltiy to make the scope of the change the right size i.e not too big or small changes
+you can logically organize your commits and make them meaning ful
+
+CONS
+subject to human error a lot
+requires training and practice to get used to making commits at the right time
+Google docs might save changes at illogical points, however, doing so at intervals - however illogical- still gives more assurance of seeing changes than making it manually
