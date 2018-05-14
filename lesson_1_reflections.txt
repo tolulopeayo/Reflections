@@ -39,3 +39,20 @@ CONS
 subject to human error a lot
 requires training and practice to get used to making commits at the right time
 Google docs might save changes at illogical points, however, doing so at intervals - however illogical- still gives more assurance of seeing changes than making it manually
+
+
+How might using version control make you more confident to make changes that could break something?
+with version control systems such as GIT, i would be daring in making changes because of the assurance that i can always revert back to a previous commit point where everything -
+- was working just fine, if i broke something.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+Organize changes in my codes better and document its history appropriately !!
+
+
+GIT checkout to checkout previous commits (i.e. previous code versions)
+
+scp (secure copy) allows you to copy one directory from a computer to another
+git clone copies the commit history of a repository, and the git clone command only works on a git repository. so how to create repositories ?
+
+Git repositories store metadata about the history of the repository since it was created
+
