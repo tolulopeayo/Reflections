@@ -1,0 +1,80 @@
+What happens when you initialize a repository? Why do you need to do it?
+
+You use the "git init" command to create a git repository or turn a normal directory to a git repo.
+to do this, create a new directory containing your code files or any file actually. navigate to that directory and run the "git init" command
+teh process of creating a repo is also called initializing the repository. when you initialize a repository, the .git file is created in the repository.
+you can run the ls -a to view this file among the list of subdirectories
+
+
+Commands and terminologies
+
+"git init"  = command to intialize a git repository
+"git status" = check the status of the git repository to see if you are tracking files within the repository or the files that are untracked
+"git add" = this is used to add a file to the staging area which means you want to make a commit. 
+working directory = the current repository you are on
+staging area = a logical space within the repository where files you intend to track or commit are placed, afte using the "git add" command
+repository = a git directory containing all code files/bases that are interrelated
+
+GIT CHEAT SHEET
+https://github.com/github/training-kit/blob/master/downloads/github-git-cheat-sheet.pdf
+
+"git checkout master" takes you back to the head state or the most recent commit
+
+How can you use the staging area to make sure you have one commit per logical change?
+To make sure you implement one commit per logical change, each time you make a change that you think corrresponds to a particular type - 
+- of change (e.g. change in docs, change in a function, add new function, fix a particular bug e.t.c) add the file within which you made that change to the
+staging area and run git commit i.e. commit it.
+
+
+BRANCHES
+
+Git allows you to create labels for your commits called branches. In some sense, a branch is a commit different from the sequential normal program flow or different from 
+the master branch, usually created for the purpose of trying new experimental features but not wanting to compromise the original working codebase while still working on it.
+The name given to the main baranch in a repo is called MASTER
+The process of combining two commits is referred to as merging
+
+"git branch" shows you the current branch
+"git branch "branch_name" creates a branch from the current commit you are checking out and names it "branch_name"
+"git log --graph --oneline "Branch_name a" "branch_name b" gives a logical structure of branches you have specified (i.e. a and b) in relation to each other. it shows the commit history of each branch
+and where the commits of each branch are in relation to each other
+
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Branches would be helpful in keeping your history organized in situations where you intend to try out some experimental feature while still working on the normal codebase you
+intend to show as your working demo. Branches would help by creating a commit(branch) separate from the master commit where all changes made on that commit created would not affect new commits made on the initial master branch.
+You could have a production branch which is your master branch that always works; and a development branch where you continue to work for improvements etc
+Branches allow you to compartmentalize work or context switch. 
+when working on a feature becomes boring, you can switch to a new branch that allows you to work on a new feature while still keeping the old feature you were working on active
+
+How do the diagrams help you visualize the branch structure?
+the branch driagrams helps to undertsand the logical structure of your repository. the sturcture of a repository isnt always sequential. it might contain different commits for the same sets of files
+that each continue to branch out, with each branch representing a distinct function. the branch diagrams help to undertsand these branches in relation to the master branch which contains the production commit
+
+
+In cases where you revert to an old commit (i.e. checkout an old commit) from the head, modify a file at that previous commit, and then commit this new change. the new commit branches out of the former branch.
+If you then checkout a commit on the former branch(up the branch chain), your code will not relflect the commit you made from the previous commit point you earlier rreverted to. doing a git log at this point doesnt show the new commit you made when you were checking out that previous commit point. To gain access to that new commit you made while checking out the previous commit (or to make your code relect that change, you need to specify a branch for the new commit you want to make on the previous commit from the head you are checking out). To do this, while checking out that previous commit, create a branch using the "git branch branch_name" and consequently the "git checkout branch_name". A short-cut for this is the command "git checkout -b branch_name", while checking out that previosu commit
+
+*****NOTE**** DOING GIT DIFF ON TWO PREVIOUS COMMITS AND MODIFYING A CORRESPONDING FILE, WHILE CHECKING OUT THE HEAD COMMIT, AND THEN CONSEQUENTLY MAKING A NEW COMMIT IS DIFFERENT FROM CHECKING OUT A PREVIOUS COMMIT FROM THE HEAD,MODIFYING A FILE AND THEN COMMITING, WHILE CHECKING OUT THAT PREVIOUS COMMIT. FOR THE LATTER SCENARIO, THE NEW COMMIT YOU MADE ON THE PREVIOUS COMMIT YOU CHECKED OUT BRANCHES OUT OF YOUR ORIGINAL BRANCH****
+
+"git merge master coins" or "git merge coins" where master is the currently checked out branch
+"git show commit_ID" does a diff on the commit you have typed against its parent commit. This is especially useful when you merge branches. Since the resultant branch organizes commits by time  stamp, a preceding commit might not be the parent commit of the next commit.
+
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+The result of merging two branches is a single branch that offers the functionality of the two branches, which can now be accessed through the single combined branch. whereas, doing a git log on one of the branches prior to the branch might not reflect the commits you made within the other branch, doing a git log on the resultant merged branch shows all the commits you made in the two branches together. these commits are displayed in order using timestamps. 
+We represent it in diagram as it is a good way to have a mental note of your repo structure.
+
+
+"git branch -d "branch_name"" - used to delete a branch label after you have merged that branch with another one.
+
+When you merge, you create a new merge commit. merge commits have more than one parent commit
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+ *************************PROS OF AUTOMATIC MERGING VS MANUAL MERGING ****************************************
+ *************************CONS OF AUTOMATIC MERGING VS MANUAL MERGING ****************************************
+
+
+
+
